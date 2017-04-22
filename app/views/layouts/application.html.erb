@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo</title>
+    
+
+    
+  </head>
+  <body>
+  <div class="navbar">
+  	<ul>
+  	<li><%= link_to "Home", root_path%></li> 
+  	<li><%= link_to"New", new_item_path%></li> 
+  	<li>About</li>	
+
+
+  	</ul>
+
+
+
+  </div>
+
+    <%= yield %>
+  </body>
+</html>

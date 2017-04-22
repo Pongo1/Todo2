@@ -1,0 +1,10 @@
+<h1>Welcome!</h1>
+<p>Here are a list of all your items</p>
+<br> 
+<div class = "Checklist items">
+	<%= @items.each do |item|%></div>
+	<h2><%=link_to item.title , item %> </h2>
+	<p><%= item.description %></p>
+	<%end%> 
+</div> 
+
