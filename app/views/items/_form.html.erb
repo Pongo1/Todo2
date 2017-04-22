@@ -1,12 +1,33 @@
+
+<style> 
+
+.new{
+border-style:solid ;
+border-width: 2px;
+border-color: blue;
+margin-left: 40px;
+margin-right:700px;
+font-family: "Century Gothic",CenturyGothic, sans-serif;
+padding: 30px;
+
+}
+</style>
+
+<div class="new">
 <%= form_for @item do |f|%> 
 <%=f.label :title%>
 <br>
+<br>
 <%= f.text_field :title%>
+<br>
 <br>
 <%= f.label :description%>
 <br>
+<br>
 <%= f.text_area :description%>
+<br>
 <br>
 <%= f.button :create%> 
 
 <%end%>
+</div>

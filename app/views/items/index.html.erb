@@ -1,9 +1,40 @@
+
 <h1>Welcome!</h1>
 <p>Here are a list of all your items</p>
 <br> 
-<div class = "Checklist items">
+<style>
+body{
+
+	background-color: #EFEFEF;
+    color: #2E2F30;  
+     text-align: left;
+    font-family: "Century Gothic",CenturyGothic, sans-serif;
+    margin-left: 300px;
+    background-color: #EFEFEF;
+    margin-right: 300px;
+}
+
+
+p{
+	font-family: "Copperplate", Copperplate Gothic Light, sans-serif;
+	border-style: solid;
+	border-width:1px;
+	padding:10px;
+	border-color: pink;
+}
+h1 {
+
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 45px;
+	color: green;
+}
+
+
+</style>
+
+<div class = "Checklist">
 	<%= @items.each do |item|%></div>
-	<h2><%=link_to item.title , item %> </h2>
+	<h3><%=link_to item.title , item %> </h3>
 	<p><%= item.description %></p>
 	<%end%> 
 </div> 

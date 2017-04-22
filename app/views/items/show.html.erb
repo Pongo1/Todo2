@@ -1,5 +1,28 @@
+<style>
+body{
+
+	background-color: #EFEFEF;
+    color: #2E2F30;  
+     text-align: left;
+    font-family: "Century Gothic",CenturyGothic, sans-serif;
+ 
+}
+.all{
+
+	border-style: solid;
+	border-width:2px;
+	padding: 30px;
+	border-color: pink;
+	margin-right: 500px;
+	margin-left: 40px;
+}
+</style>
+
+
+<div class="all">
 <h1><%= @item.title%></h1>
 <p><%=@item.description%></p>
 <%= link_to "Edit", edit_item_path(@item)%>
 <%= link_to "Back", root_path%> 
 <%= link_to "Delete", item_path(@item), method: :delete, data: {confirm: "Are you sure you want to delet this task?"} %>
+</div>
