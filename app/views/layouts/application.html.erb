@@ -7,39 +7,64 @@
   </head>
 
   <body>
+  
   <style> 
-  li{display: inline-block;
+  li{
+
+    display: inline-block;
   	margin:0px;
-  	padding-right:10px;
   	border-style: solid;
   	border-width:2px;
-  	padding:20px;
+  	padding:10px;
+    font-color: red;
+    border-radius: 10px;
+    text-decoration: none;
+
 
   }
  li:hover{
 background-color: blue;
     color: white;
-
+    
  }
   li a:hover {
     background-color: blue;
     color: white;
 }
-  </style>
+a{
 
+
+  text-decoration: none;
+}
+.navbar{
+border-style:solid;
+border-width:2px;
+border-radius: 15px;
+border-color: purple;
+padding:0px;
+background-color: black;
+border-bottom-width:5px;
+margin-left:0px;
+
+
+
+}
+  </style>
   <div class="navbar">
   	<ul>
   	<li><%= link_to "Home", root_path%></li> 
-  	<li><%= link_to"New", new_item_path%></li> 
-  	<li>About</li>	
-
-
-  	</ul>
-
-
-
+  	<li>About</li>
+    <% if user_signed_in?%> 
+    <li><%= link_to"New", new_item_path%></li> 
+    <li><%= link_to"Sign Out", new_item_path%></li> 
+    <% else %>	
+    <li><%= link_to "Sign In", new_user_session_path%></li>
+    <li><%= link_to "Sign Up", new_user_registration_path%></li>
+    <%end%>
+  	</ul> 
   </div>
-
+<p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

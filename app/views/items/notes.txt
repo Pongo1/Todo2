@@ -1,0 +1,10 @@
+p{
+	font-family: "Copperplate", Copperplate Gothic Light, sans-serif;
+	
+	padding:10px;
+	border-color: pink;
+	border-style: solid;
+	border-width:1px;
+	border-radius: 10px;
+	padding:5px;
+}

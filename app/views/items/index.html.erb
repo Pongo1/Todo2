@@ -1,7 +1,4 @@
 
-<h1>Welcome! Welcome!</h1>
-<p>Here are a list of all your items</p>
-<br> 
 <style>
 body{
 
@@ -9,18 +6,9 @@ body{
     color: #2E2F30;  
      text-align: left;
     font-family: "Century Gothic",CenturyGothic, sans-serif;
-    margin-left: 300px;
-    background-color: #EFEFEF;
-    margin-right: 300px;
-}
+    background-color:black;
+    
 
-
-p{
-	font-family: "Copperplate", Copperplate Gothic Light, sans-serif;
-	border-style: solid;
-	border-width:1px;
-	padding:10px;
-	border-color: pink;
 }
 h1 {
 	 text-shadow: 6px 2px black;
@@ -30,12 +18,32 @@ h1 {
 }
 
 
+}
+.Checklist p{
+	border-style: solid;
+	border-width:2px;
+	padding: 20px;
+	border:pink;
+	border-top-width:10px;
+	border-radius:10px;
+a{
+
+	text-decoration: none;
+}
+
 </style>
 
 <div class = "Checklist">
-	<%= @items.each do |item|%></div>
+<% if user_signed_in? %>
+	<%= @items.each do |item|%>
+	<div class="item">
 	<h3><%=link_to item.title , item %> </h3>
-	<p><%= item.description %></p>
+	<p><%= item.description%></p>
 	<%end%> 
+	<% else %> 
+	<%= render "first_page" %>
+	<%end%>
+	</div>
 </div> 
+
 
